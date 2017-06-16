@@ -10,36 +10,36 @@
   <body>
 
   <div class="title">
-    <h1> Survey Form for FreeCodeCamp</h1>
+    <h1 id='title'> Survey Form for FreeCodeCamp</h1>
   </div>
 
   <div class="container">
     <div class="row">
-      <h2> Let us know how to improve FreeCodeCamp</h2>
+      <p id='description'> Let us know how to improve FreeCodeCamp</p>
     </div>
    
 
-  <form action="#">
+  <form id='survey-form' action="#">
   <!-- NAME-->
       <div class="form-group row">
-        <label for="Name" class="col-4"> * Name:</label>
-        <input type="text" name="Name" placeholder="Insert your name" class='form-control col-8' required>
+        <label for="Name" id='name-label'class="col-4"> * Name:</label>
+        <input type="text" name="Name" placeholder="Insert your name" id='name' class='form-control col-8' required>
       </div>
   <!-- EMAIL-->
       <div class="form-group row">
-        <label for="email" class="col-4">* E-mail:</label>
-        <input type="email" class='form-control col-8' name='email' placeholder='add your email' required>
+        <label for="email" id='email-label' class="col-4">* E-mail:</label>
+        <input type="email" id ='email' class='form-control col-8' name='email' placeholder='add your email' required>
       </div>
 
   <!--AGE-->
       <div class="form-group row">
-          <label for="age" class="col-4"> * Age:</label>
-          <input type="number" class='form-control col-8' name='age' placeholder='how old are you?' required>
+          <label for="age"  id='number-label' class="col-4"> * Age:</label>
+          <input type="number" min='1' max='100' id='number'class='form-control col-8' name='age' placeholder='how old are you?' required>
         </div>
     <!--CURRENT ROLE-->
       <div class="form-group row">
         <label for="role" class="col-4">Which option best describes your current role? </label>
-        <select class='custom-select'>
+        <select id='dropdown' class='custom-select'>
           <option disabled value="1"> Choose your roles </option>
           <option selected> Student</option>
           <option value="1"> Full Time Job</option>
@@ -160,7 +160,7 @@
 
   <!-- SUBMIT -->
     <div class="row">
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button id ='submit' type="submit" class="btn btn-success">Submit</button>
     </div>
 
 
