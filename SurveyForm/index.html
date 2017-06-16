@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> FCC Survey Form- Alberto M</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <div class="title">
+    <h1> Survey Form for FreeCodeCamp</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h2> Let us know how to improve FreeCodeCamp</h2>
+    </div>
+   
+
+  <form action="#">
+  <!-- NAME-->
+      <div class="form-group row">
+        <label for="Name" class="col-4"> * Name:</label>
+        <input type="text" name="Name" placeholder="Insert your name" class='form-control col-8' required>
+      </div>
+  <!-- EMAIL-->
+      <div class="form-group row">
+        <label for="email" class="col-4">* E-mail:</label>
+        <input type="email" class='form-control col-8' name='email' placeholder='add your email' required>
+      </div>
+
+  <!--AGE-->
+      <div class="form-group row">
+          <label for="age" class="col-4"> * Age:</label>
+          <input type="number" class='form-control col-8' name='age' placeholder='how old are you?' required>
+        </div>
+    <!--CURRENT ROLE-->
+      <div class="form-group row">
+        <label for="role" class="col-4">Which option best describes your current role? </label>
+        <select class='custom-select'>
+          <option disabled value="1"> Choose your roles </option>
+          <option selected> Student</option>
+          <option value="1"> Full Time Job</option>
+          <option value="2"> Full Time Learner</option>
+          <option value="3"> Prefer not to say</option>
+          <option value="4"> Other</option>
+        </select>
+      </div>
+
+  <!--RECOMMEND FCC-->
+    <div class="form-group row">
+      <label for="recommendation" class="col-4"> * How likely is that you would recommend freeCodeCamp to a friend?</label>
+      <div class="col-8">
+        <div class="form-check">
+            <label for="recommendation" class="form-check-label">
+              <input type="radio" name='recommendation' class="form-check-input" value="option1"> Definitely
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="recommendation" class="form-check-label">
+              <input type="radio" name='recommendation' class="form-check-input" value="option2"> Maybe
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="recommendation" class="form-check-label">
+              <input type="radio" name='recommendation' class="form-check-input" value="option3"> Not Sure
+            </label>
+        </div>
+      </div>
+    </div>  <!-- end form group-->
+
+  <!--WHAT DO YOU LIKE MOST-->
+    <div class="form-group row">
+      <label for="role" class="col-4">What do you like most in FCC: </label>
+      <select class='custom-select'>
+        <option disabled value="1"> Select an option: </option>
+        <option selected> Challenges</option>
+        <option value="1"> Projects </option>
+        <option value="2"> Community</option>
+        <option value="3"> Spen Source</option>
+        <option value="4"> Other</option>
+      </select>
+    </div>
+
+  <!--THINGS TO IMPROVE-->
+    <div class="form-group row">
+      <label for="improve" class="col-4">  Things that should be improved in the future
+                                            (Check all that apply):
+      </label>
+      <div class="col-8">
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option1"> Front-end Projects
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option2"> Back-end Projects
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option3"> Data Visualization
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option4"> Challenges
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option5"> Open Source Community
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option6"> Gitter help rooms
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option7"> Videos
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option8"> City Meetups
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option9"> Wiki
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option10"> Forum
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="improve" class="form-check-label">
+              <input type="checkbox" name='improve' class="form-check-input" value="option10"> Additional courses
+            </label>
+        </div>
+      </div> <!-- end col-8-->
+    </div>  <!-- end form group-->
+
+  <!-- COMMENTS-->
+    <div class="form-group row">
+          <label for="comments" class="col-4"> Any Comments or Suggestions?:</label>
+          <textarea placeholder="Enter your comment here..." name="comments"  class='form-control col-8' required> </textarea>
+    </div>
+
+     <div class="row">
+      <span> Fields marked with <b> * are required </span>
+    </div>
+
+  <!-- SUBMIT -->
+    <div class="row">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+
+
+  </form>
+</div> <!-- end container -->
+
+
+
+  </body>
+</html>
