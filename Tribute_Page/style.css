@@ -1,0 +1,123 @@
+html {
+  font-size: 1vw;
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+#main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+#img-div, #image {
+  width: 100%;
+  height: 100%;
+}
+#image {
+  background-image: url('layne.jpg');
+  background-position: center;
+  background-size: cover;
+}
+#img-caption {
+  position: absolute;
+  top: 10vh;
+  height: auto;
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+#img-caption h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+#img-caption p {
+  font-size: 2rem;
+}
+
+
+/**
+ *
+ * ASIDE
+ *
+ */
+aside {
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  min-width: 15vw;
+  text-align: center;
+  padding-bottom: 5vh;
+  padding-right: 2vw;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 2rem;
+  
+}
+
+#invisible {
+  display: none;
+  
+}
+#info {
+  font-size: 8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+ul li {
+  margin-top: 2vh;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+
+#tribute-link {
+  min-height: 5vh;
+  font-size: 3rem;
+  display: block;
+  position: absolute;
+  bottom: 4vh;
+  left: 45vw;
+  width: auto;
+
+}
+
+
+/*=============================================
+=            MEDIA QUERIES            =
+=============================================*/
+@media (max-width: 900px){
+  #image {
+    background-position: left;
+  }
+  #img-caption h1 {
+    font-size: 6rem;
+  }
+  #img-caption p {
+    font-size: 4rem;
+  }
+  aside {
+    font-size: 3rem;
+  }
+}
+
+
+/*=====  End of MEDIA QUERIES  ======*/
+
+
+
