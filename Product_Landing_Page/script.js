@@ -1,3 +1,4 @@
 $(document).ready(function() {
-	$('#fullpage').fullpage();
+  $('#fullpage').fullpage();
+  anchors:['landing-page', 'features', 'how_it_works','pricing']
 });

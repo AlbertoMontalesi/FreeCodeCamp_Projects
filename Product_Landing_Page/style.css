@@ -17,27 +17,27 @@ html {
 
 /* main */
 
-#landing-page,
-#features,
-#how_it_works,
-#pricing
+#landing-page-section,
+#features-section,
+#how_it_works-section,
+#pricing-section
  {
   height: 93vh;
 }
 
-#landing-page {
+#landing-page-section {
   background-color: orange;
 }
 
-#features{
+#features-section{
   background-color: blue;
 }
 
-#how_it_works{
+#how_it_works-section{
     background-color:red;
 
 }
 
-#pricing {
+#pricing-section {
   background-color:  green;
 }
