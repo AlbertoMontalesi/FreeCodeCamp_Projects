@@ -1,0 +1,19 @@
+html {
+  font-size: 1vw;
+}
+
+
+
+#header-img {
+  width: 2rem;
+  height: auto;
+}
+
+#header, nav {
+  height: 7vh;
+}
+
+
+
+/* main */
+
