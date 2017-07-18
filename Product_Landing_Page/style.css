@@ -26,8 +26,33 @@ html {
 }
 
 #landing-page-section {
-  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10vh 5vw 5vh 5vw;
 }
+
+#landing-page-description {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;  
+  padding-right: 2vw;
+  padding-bottom: 2vh;
+}
+
+#landing-page-image {
+  height: auto;
+}
+iframe {
+ width: 100%;
+ min-height: 400px;
+}
+
+
+
+
+
+
 
 #features-section{
   background-color: blue;
@@ -41,3 +66,22 @@ html {
 #pricing-section {
   background-color:  green;
 }
+
+
+
+
+/*=============================================
+=            MEDIA QUERIES            =
+=============================================*/
+@media (max-width:991px){
+  html {
+    font-size: 1.8vw;
+  }
+    #header {
+      font-size: 3rem;
+    }
+    
+}
+
+/*=====  End of MEDIA QUERIES  ======*/
+

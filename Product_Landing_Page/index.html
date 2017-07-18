@@ -11,13 +11,16 @@
     <!-- FULL PAGE JS CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css">
 
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!--MATERIALIZE JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    
     <!-- jquery-->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!--MATERIALIZE JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <!-- full page js-->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.js'></script>
     <!--my js -->
@@ -27,27 +30,47 @@
 
   <body>
 
-      <!-- navbar  -->
+    <!-- navbar  -->
     <header id='header' class='navbar-fixed'>
       <nav id='nav-bar'>
         <div class="nav-wrapper container">
           <div class="brand-logo">
             <img src="book-icon.svg" id='header-img' alt="logo-icon-book">
             <a href="#landing-page">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           </div>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#features" class='nav-link'>Features</a></li>
             <li><a href="#how_it_works" class='nav-link'>How it works</a></li>
             <li><a href="#pricing" class='nav-link'>Pricing</a></li>
           </ul>
+         
         </div>
       </nav>
-    </header> 
+    </header>
+     <ul class="side-nav" id="mobile-demo">
+            <li><a href="#features" class='nav-link'>Features</a></li>
+            <li><a href="#how_it_works" class='nav-link'>How it works</a></li>
+            <li><a href="#pricing" class='nav-link'>Pricing</a></li>
+          </ul>
 
 
     <!-- main section -->
     <main id="fullpage">
-      <div id="landing-page-section" class='section' data-anchor='landing-page'>
+      <div id="landing-page-section" class='section row container' data-anchor='landing-page'>
+        <section id="landing-page-description" class='col s12 l5'>
+          <div class="row">
+            <h1 class='col s12'>Learning Hub</h1>
+            <form id="form" class='col 12' action="https://www.freecodecamp.com/email-submit">
+              <input name="email" id="email" type="email" placeholder="Enter your email address" required/>
+              <input id="submit" type="submit" value="Get Started" class="btn btn-large"></input>
+            </form>
+          </div>
+
+
+        </section>
+        <section id='landing-page-image' class='col s12 l7'>
+          <iframe src="https://www.youtube.com/embed/v8kFT4I31es?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -59,7 +82,7 @@
 
 
       <div id="features-section" class='section' data-anchor='features'></div>
-      <div id="how_it_works-section" class='section' data-anchor='how_it_works' ></div>
+      <div id="how_it_works-section" class='section' data-anchor='how_it_works'></div>
       <div id="pricing-section" class='section' data-anchor='pricing'></div>
 
     </main>
