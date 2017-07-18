@@ -104,8 +104,29 @@ iframe {
 
 
 #how_it_works-section{
-    background-color:red;
+    background-color:#3498db;
 
+}
+  #how_it_works-section .row {
+    height: 100%;
+    padding-top: 5vh;
+  }
+
+.how-description ul {
+  font-size: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.how-description li {
+  margin-top: 2vh;
+}
+
+
+
+.how-image img {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -126,12 +147,15 @@ iframe {
 =============================================*/
 @media (max-width:991px){
   html {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
     #header {
       font-size: 3rem;
     }
-    
+    .how-description ul {
+      align-items: center;
+
+    }
 }
 
 /*=====  End of MEDIA QUERIES  ======*/
