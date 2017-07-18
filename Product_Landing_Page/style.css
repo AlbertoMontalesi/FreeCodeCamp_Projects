@@ -25,11 +25,21 @@ html {
   height: 93vh;
 }
 
+
+
+/**
+ *
+ * LANDING PAGE
+ *
+ */
+
+
 #landing-page-section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 10vh 5vw 5vh 5vw;
+  
 }
 
 #landing-page-description {
@@ -51,17 +61,58 @@ iframe {
 
 
 
-
+/**
+ *
+ * FEATURES SECTION
+ *
+ */
 
 
 #features-section{
-  background-color: blue;
+  background-color: #bdc3c7;
 }
+
+#features-section i {
+  font-size: 10rem;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * HOW IT WORKS
+ *
+ */
+
 
 #how_it_works-section{
     background-color:red;
 
 }
+
+
+
+
+
+
 
 #pricing-section {
   background-color:  green;
