@@ -6,58 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product Landing Page</title>
-    <!-- Compiled and minified CSS -->
+    <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!-- FULL PAGE JS CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css">
 
+    <!-- MY CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Compiled and minified JavaScript -->
+    <!--MATERIALIZE JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-
+    <!-- jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- full page js-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.js'></script>
+    <!--my js -->
     <script src='script.js'></script>
 
   </head>
 
   <body>
 
-  <!-- navbar -->
-    <header id='header'>
+      <!-- navbar  -->
+    <header id='header' class='navbar-fixed'>
       <nav id='nav-bar'>
         <div class="nav-wrapper container">
           <div class="brand-logo">
             <img src="book-icon.svg" id='header-img' alt="logo-icon-book">
-            <a href="#landing-page" >Logo</a>
+            <a href="#landing-page">Logo</a>
           </div>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#features" class='nav-link'>Features</a></li>
             <li><a href="#how_it_works" class='nav-link'>How it works</a></li>
-            <li><a href="#pricing" class='nav-link' >Pricing</a></li>
+            <li><a href="#pricing" class='nav-link'>Pricing</a></li>
           </ul>
         </div>
       </nav>
-    </header>
+    </header> 
 
 
     <!-- main section -->
-    <main>
-      <section id="landing-page">
+    <main id="fullpage">
+      <div id="landing-page" class='section'>
 
 
 
-      </section> <!-- end landing page section-->
+      </div>
+      <!-- end landing page div-->
 
 
 
 
 
-      <section id="features"></section>
-      <section id="how_it_works"></section>
-      <section id="pricing"></section>
-
+      <div id="features" class='section'></div>
+      <div id="how_it_works" class='section'></div>
+      <div id="pricing" class='section'></div>
 
     </main>
 
-<!-- footer section -->
+    <!-- footer div -->
 
 
   </body>

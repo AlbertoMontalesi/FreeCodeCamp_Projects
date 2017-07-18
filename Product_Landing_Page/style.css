@@ -17,3 +17,27 @@ html {
 
 /* main */
 
+#landing-page,
+#features,
+#how_it_works,
+#pricing
+ {
+  height: 93vh;
+}
+
+#landing-page {
+  background-color: orange;
+}
+
+#features{
+  background-color: blue;
+}
+
+#how_it_works{
+    background-color:red;
+
+}
+
+#pricing {
+  background-color:  green;
+}
