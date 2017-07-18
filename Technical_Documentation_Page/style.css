@@ -1,0 +1,118 @@
+
+html {
+  font-size: 1vw;
+}
+* {
+  margin: 0;
+  border:0;
+  color: black !important;
+  list-style-type: none;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */}
+
+  #container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-y: auto;
+  width: 100vw;
+}
+
+
+
+
+
+
+header {
+  font-size: 3rem;
+}
+#navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  text-align: center;
+  background-color: #ecf0f1;
+  overflow-y: auto;
+  scrollbar
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  border: none !important;
+  padding-left: 0;
+
+}
+  .collection a {
+  background-color: inherit !important;
+  padding: 2vh 0 !important;
+  border-bottom: 1px solid black;
+  }
+.collection a:hover {
+  background-color: #bdc3c7 !important;
+}
+.collection li {
+  width: 100%;
+  height: 100%;
+  background-color: inherit !important;
+}
+
+
+
+/**
+ *
+ * MAIN 
+ *
+ */
+#main-doc {
+  width: 70vw;
+  margin-left: 22vw;
+}
+
+
+section {
+  margin-top: 4rem;
+}
+section header {
+  margin-bottom: 1rem;
+}
+
+/**
+ *
+ * MEDIA QUERIES
+ *
+ */
+
+
+  @media (max-width: 900px){
+    html {
+      font-size: 1.5vw;
+    }
+    #navbar {
+      width: 100vw; 
+      max-height: 30vh;
+      font-size: 3rem;
+
+    }
+    #navbar ul {
+      overflow-y: auto;
+    }
+  
+    .collection li {
+      font-size: 2.5rem;
+        }
+    header {
+      font-size: 4rem;
+    }
+
+    #main-doc {
+      margin-top: 5vh;
+      font-size: 2rem; 
+    }
+  }
