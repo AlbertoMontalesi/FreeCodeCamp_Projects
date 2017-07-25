@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product Landing Page</title>
-    <!-- MATERIALIZE CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
     <!-- FULL PAGE JS CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css">
-
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <!-- materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- MY CSS -->
@@ -19,12 +19,22 @@
 
     <!-- jquery-->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!--MATERIALIZE JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+  
+     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true`   -->
+    <script type='text/javacript' src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/scrolloverflow.min.js'></script> 
+
+   
+
     <!-- full page js-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js'></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.extensions.min.js'></script>
+
+    <!--MATERIALIZE JS-->
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
     <!--my js -->
-    <script src='script.js'></script>
+    <script type='text/javascript' src='script.js'></script>
 
   </head>
 
@@ -80,20 +90,22 @@
 
 
       <div id="features-section" class='section' data-anchor='features'>
-        <section class="row container">
-          <div class="feature-item col s12 l4">
-            <i class="material-icons"> thumbs_up_down </i>
-            <h5> Upvote and Downvote the best material</h5>
-          </div>
-          <div class="feature-item col s12 l4">
-            <i class="material-icons"> contacts</i>
-            <h5> Add friends to study together</h5>
-          </div>
-          <div class="feature-item col s12 l4"> 
-            <i class="material-icons"> translate </i>
-            <h5>Practice by translating real life material</h5>
-          </div>
-
+        <div class="container">
+          <h3>Features</h3>
+          <section class="row">
+            <div class="feature-item col s12 l4">
+              <i class="material-icons"> thumbs_up_down </i>
+              <h5> Upvote and Downvote the best material</h5>
+            </div>
+            <div class="feature-item col s12 l4">
+              <i class="material-icons"> contacts</i>
+              <h5> Add friends to study together</h5>
+            </div>
+            <div class="feature-item col s12 l4">
+              <i class="material-icons"> translate </i>
+              <h5>Practice by translating real life material</h5>
+            </div>
+        </div>
         </section>
 
       </div>
@@ -105,21 +117,24 @@
 
 
       <div id="how_it_works-section" class='section' data-anchor='how_it_works'>
-        <section class="row container">
-          <div class="how-description col s12 l5">
-            <ul>
-              <li>Create an Account</li>
-              <li> Choose a language to learn</li>
-              <li> Select a story to translate</li>
-              <li>Publish a translation and receive feedback</li>
-              <li>Make friends and correct their translations</li>
-            </ul>
+        <div class="container">
+          <h3>How it works</h3>
+          <section class="row">
+            <div class="how-description col s12 l5">
+              <ul>
+                <li>Create an Account</li>
+                <li> Choose a language to learn</li>
+                <li> Select a story to translate</li>
+                <li>Publish a translation and receive feedback</li>
+                <li>Make friends and correct their translations</li>
+              </ul>
 
-          </div>
-          <div class="how-image col s12 l7">
-            <img src="phone.png" alt="phone mockup">
+            </div>
+            <div class="how-image col s12 l7">
+              <img src="phone.png" alt="phone mockup">
 
-          </div>
+            </div>
+        </div>
         </section>
 
       </div>
@@ -128,7 +143,52 @@
 
 
 
-      <div id="pricing-section" class='section' data-anchor='pricing'></div>
+      <div id="pricing-section" class='section' data-anchor='pricing'>
+        <div class="container">
+          <h3>Pricing</h3>
+          <div class="row">
+            <div class="col s12 l4">
+              <div class="price">
+                <h6>Basic Plan</h6>
+                <ul>
+                  <li>One text per day to translate</li>
+                  <li> Publish one translation per week</li>
+                  <li> One language to choose</li>
+                </ul>
+                <button class='btn'> FREE </button>
+              </div>
+            </div>
+            <div class="col s12 l4">
+              <div class="price">
+                <h6>Premium Plan</h6>
+                <ul>
+                  <li>Unlimited text to translates</li>
+                  <li> Publish unlimited translation per week</li>
+                  <li> Unlimited language to choose</li>
+                </ul>
+                <button class='btn'> 29,99 $/ Month </button>
+              </div>
+            </div>
+            <div class="col s12 l4">
+              <div class="price">
+                <h6>Pro Plan</h6>
+                <ul>
+                  <li>All the above plus:</li>
+                  <li> Translations posted on the homepage</li>
+                </ul>
+                <button class='btn'> 59,99 $/ Month </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+      <!-- end of pricing div  -->
 
     </main>
 
