@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* bg image and transition serves to fill in the container with a color during the work session */
+
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  background-size: 200% 200%;
+  background-color: #fff;
+  background-image: linear-gradient(to top, red 50%, transparent 50%);
+  transition: background-position 300ms, color 300ms ease;
+}
+
+#container:hover {
+  background-image: linear-gradient(to top, red 51%, transparent 50%);
+  background-position: 0 100%;
+  transition: background-position 2500ms,
+  color 2500ms ease;
+}
