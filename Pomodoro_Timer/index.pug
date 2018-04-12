@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Pomodoro Timer
+    link(rel='stylesheet', href='style.css')
+    script(defer='', src='https://use.fontawesome.com/releases/v5.0.10/js/all.js', integrity='sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+', crossorigin='anonymous')
+    script(src="script.js")
+
+  body
+    #container
+      #pomodoro_container
+        #button_increase
+          i.fas.fa-plus
+        #button_decrease
+          i.fas.fa-minus
+        #pomodoro_timer
+          span#pomodoro_counter 25 mins
+        #pomodoro_list
+          ul Today you worked for:
+            li 20 mins
+            li 15 mins
+            li 12 min
+        #button_container
+          #button_pause
+            i.fas.fa-pause
+          #button_start
+            i.fas.fa-play
+          #button_reset
+            i.fas.fa-square  
