@@ -20,16 +20,16 @@ body {
   display: flex;
   background-size: 200% 200%;
   background-color: #fff;
-  background-image: linear-gradient(to top, red 50%, transparent 50%);
-  transition: background-position 300ms, color 300ms ease;
+  /* background-image: linear-gradient(to top, orange 50%, transparent 50%); */
+  /* transition: background-position 2500ms, color 20ms ease; */
 }
 
-#container:hover {
-  background-image: linear-gradient(to top, red 51%, transparent 50%);
-  background-position: 0 100%;
-  transition: background-position 2500ms,
-  color 2500ms ease;
-}
+  /* #container:hover {
+    background-image: linear-gradient(to top, red 51%, transparent 50%);
+    background-position: 0 100%;
+    transition: background-position 2500ms,
+    color 2500ms ease;
+  } */
 
 /* create the grid layout */
 
@@ -43,7 +43,7 @@ body {
   grid-template-areas: 
   "increase   ...   decrease  list"
   " ...   timer ...    list"
-  " ...   buttons ...  list "                       
+  " ...   buttons ... list" ;
 }
 #button_increase {
   grid-area: increase;
@@ -61,6 +61,7 @@ body {
 }
 #pomodoro_timer {
   grid-area: timer;
+  display: grid;
   width:20vw;
   height: 20vw;
   display: flex;
