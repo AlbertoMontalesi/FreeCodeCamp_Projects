@@ -12,23 +12,28 @@ html(lang='en')
   body
     #container
       // container for the timer
-      #clock
+      #clock.work
         //dispaly time here
-        #timer 
-      #session-info
-        #session-type
+        #timer
+      #session_info
+        #session_type
           div Work
-        #session-count
+        #session_count
           div Session 1
       #settings
-        #timer-work
+        #timer_work
           h6 Work time
+          // js display here the work time
           p#work_time__display
           button.minus -
           button.plus +
-        #timer-break
+        #timer_break
           h6 Break time
+          // js display here the break time
           p#break_time__display
           button.minus -
           button.plus + 
+      #buttons
+        button#button_start Start
+        button#button_reset Reset
     

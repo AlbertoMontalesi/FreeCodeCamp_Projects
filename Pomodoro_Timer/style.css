@@ -16,8 +16,37 @@ body {
 
 
 #container {
-  width: 100%;
-  max-width: 800px;
-  height: 600px;
-  background-color:blue;
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  padding: 2%;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#clock {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#session_info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+#settings,
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 25px;
 }
