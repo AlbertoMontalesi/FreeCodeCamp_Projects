@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+// grab the div with the session counter
+var sessionCounter = document.querySelector("#session_count div");
+
 // initialize the Clock and display the initial values
 let clock = new Clock();
 clock.displayCurrentTime();
@@ -19,12 +22,12 @@ let timer = document.querySelector("#timer");
 // var breakDisplay = document.querySelector("#break_time__display");
 
 
-// work and break minus and plus buttons
-let workMinus = document.querySelector("#timer_work .minus");
-let workPlus = document.querySelector("#timer_work .plus");
 
-let breakMinus = document.querySelector("#timer_break .minus");
-let breakPlus = document.querySelector("#timer_break .minus");
+// work and break minus and plus buttons
+let workMinus = document.querySelector("#timer_work button.minus");
+let workPlus = document.querySelector("#timer_work button.plus");
+let breakMinus = document.querySelector("#timer_break button.minus");
+let breakPlus = document.querySelector("#timer_break button.plus");
 // start and reset buttons
 let start = document.querySelector("#button_start");
 let reset = document.querySelector("#button_reset");
@@ -40,7 +43,7 @@ workPlus.addEventListener("click", () => {
 });
 
 breakMinus.addEventListener("click", () => {
-  clock.changeBreaTime("subtract");
+  clock.changeBreakTime("subtract");
 });
 
 breakPlus.addEventListener("click", () => {
@@ -88,7 +91,7 @@ function Clock() {
   // only works if timer is not active
   this.changeWorkTime = function (str) {
     if (active === false) {
-      this.reset();
+      // this.reset();
       if (str === "add") {
         workTime += 60;
         // only allow to reduce if the time left is more than 1 mins
@@ -106,7 +109,7 @@ function Clock() {
   // only works if timer is not active
   this.changeBreakTime = function (str) {
     if (active === false) {
-      this.reset();
+      // this.reset();
       if (str === "add") {
         breakTime += 60;
         // only allow to reduce if the time left is more than 1 mins
@@ -143,6 +146,41 @@ function Clock() {
     breakDisplay.textContent = parseInt(breakTime / 60 )+ " min" ;
   }
 
+  // display the session count
+  this.displaySessionCount = () => {
+    // if we have no session, display Pomodoro Clock
+    if (sessionCount === 0){
+      sessionCounter.innerHTML = "Pomodoro Clock";
+    } 
+    // Display number of work session
+    else if(type === 'Work'){
+      sessionCounter.innerHTML= `Work session number ${sessionCount}`;
+    }
+    // if we are on break diplay a message
+     else if (type === 'Break') {
+      sessionCounter.innerHTML= "Take a break!";
+    }
+  }
+
+  // toggle the clock
+  this.toggleClock = () => {
+    if (active === true){
+      clearInterval(timer);
+      // set the vale of the button to start or pause
+      start.innerHTML = "Start";
+      active = false;
+    }
+    else {
+      start.innerHTML = "Pause";
+      if (sessionCount === 0){
+        sessionCount = 1;
+        this.displaySessionCount();
+      }
+      timer = setInterval(function(){
+        _this.stepDown();}, 1000);
+        active = true;
+    }
+  } // end toggleCLock
 
     } // end of Clock;
 
