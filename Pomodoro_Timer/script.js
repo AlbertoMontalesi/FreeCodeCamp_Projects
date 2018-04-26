@@ -91,7 +91,7 @@ function Clock() {
   // only works if timer is not active
   this.changeWorkTime = function (str) {
     if (active === false) {
-      // this.reset();
+      this.reset();
       if (str === "add") {
         workTime += 60;
         // only allow to reduce if the time left is more than 1 mins
@@ -109,7 +109,7 @@ function Clock() {
   // only works if timer is not active
   this.changeBreakTime = function (str) {
     if (active === false) {
-      // this.reset();
+      this.reset();
       if (str === "add") {
         breakTime += 60;
         // only allow to reduce if the time left is more than 1 mins
@@ -181,6 +181,43 @@ function Clock() {
         active = true;
     }
   } // end toggleCLock
+
+
+    // steps the timer down by 1
+    // when current time runs out, alternates new Session or Break
+    this.stepDown = () => {
+      if(currentTime > 0){
+        currentTime --;
+        this.displayCurrentTime();
+        if(currentTime === 0){
+          if(type ==="Work"){
+            currentTime = breakTime;
+            startTime = breakTime;
+            type = "Break";
+            this.displaySessionCount();
+          } else {
+            sessionCount ++;
+            currentTime = workTime;
+            startTime = workTime;
+            type = "Work";
+            this.displaySessionCount();
+          }
+        }
+      }
+    } // end stepDown
+
+    // reset timer
+    this.reset = () => {
+      clearInterval(timer);
+      active = false;
+      type = "Work";
+      currentTime = workTime;
+      sessionCount = 0;
+      start.innerHTML = "Start";
+      this.displayCurrentTime();
+      this.displayWorkTime();
+      this.displayBreakTime();
+    } // end of reset
 
     } // end of Clock;
 
