@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // grab the div with the session counter
 var sessionCounter = document.querySelector("#session_count div");
+// grab the whole pomodoro
+var pomodoro = document.querySelector("#clock");
 
 // initialize the Clock and display the initial values
 let clock = new Clock();
@@ -13,8 +15,7 @@ clock.displaySessionCount();
 
 
 /* my vars */
-// grab the whole pomodoro
-var pomodoro = document.querySelector("#clock");
+
 // grab the timer
 let timer = document.querySelector("#timer");
 // work and break time display
@@ -128,10 +129,10 @@ function Clock() {
     timer.textContent = formatTime(currentTime);
     // if the type is work and the class is break, set the class to work
     let pomodoro = document.querySelector("#clock");
-    if(type === "Work" && pomodoro.classList.contains("break")){
-      pomodoro.classList.remove("break").add("work");
-    } else if ( type === "Break" && pomodoro.classList.contains("work")) {
-      pomodoro.classList.remove("work").add("break");
+    if(type === "Work" && pomodoro.classList === "break"){
+      pomodoro.classList = "work";
+    } else if ( type === "Break" && pomodoro.classList === "work") {
+      pomodoro.classList = "break";
     }
   } // end displayCurrentTime
 
