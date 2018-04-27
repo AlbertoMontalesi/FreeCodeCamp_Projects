@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 var sessionCounter = document.querySelector("#session_count div");
 // grab the whole pomodoro
 var pomodoro = document.querySelector("#clock");
-
+var myBody = document.querySelector("body");
 // initialize the Clock and display the initial values
 let clock = new Clock();
 clock.displayCurrentTime();
@@ -53,6 +53,7 @@ breakPlus.addEventListener("click", () => {
 
 start.addEventListener("click", ()=> {
   clock.toggleClock();
+  clock.animateBackground();
 });
 
 reset.addEventListener("click", ()=> {
@@ -163,6 +164,8 @@ function Clock() {
     }
   }
 
+  
+  
   // toggle the clock
   this.toggleClock = () => {
     if (active === true){
@@ -183,6 +186,18 @@ function Clock() {
     }
   } // end toggleCLock
 
+    /* toggle the bg color animation */
+    this.animateBackground = () => {
+      if( active === true){
+        myBody.classList = "timer_active";
+        console.log(workTime);
+        // myBody.style.transition = `backgroundPosition ${workTime}ms`;
+      } else {
+        myBody.classList = "";
+
+      }
+
+    }
 
     // steps the timer down by 1
     // when current time runs out, alternates new Session or Break

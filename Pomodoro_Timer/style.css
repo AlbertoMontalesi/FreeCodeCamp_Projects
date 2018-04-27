@@ -11,9 +11,42 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* style for the bg colors animation to work **/
+  background-size: 200% 200%;
+  background-image: linear-gradient(to top, #A72424 50%, transparent 50%);
+  -webkit-transition: background-position 300ms,
+  color 300ms ease,
+  border-color 300ms ease;
+  -moz-transition: background-position 300ms,
+  color 300ms ease,
+  border-color 300ms ease;
+  transition: background-position 300ms,
+    color 300ms ease,
+    border-color 300ms ease;
 }
 
+/* 
+- when user click start: add this class
+- when user click pause, pause the timer
+- when user change the timer, reset the color
+- when the work is over reset the color
+*/
 
+
+body.timer_active {
+  background-image : linear-gradient(to top, #A72424 51%, transparent 50%);
+  background-position: 0 100%;
+  -webkit-transition: background-position 30000ms,
+  color 300ms ease,
+  border-color 300ms ease;
+  -moz-transition: background-position 30000ms,
+  color 300ms ease,
+  border-color 300ms ease;
+  transition: background-position 300000ms,
+  color 300ms ease,
+  border-color 300ms ease;
+}
 
 #container {
   width: auto;
