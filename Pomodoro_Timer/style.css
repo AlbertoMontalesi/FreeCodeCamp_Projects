@@ -1,3 +1,14 @@
+:root {
+  --main-bg-color: #00a8ff;
+  --main-body-color: #273c75;
+  --sec-body-color: #40739e;
+  --main-btn-color: #e84118;
+  --hover-btn-color:#fbc531;
+  --font-btn-color: #f5f6fa;
+  --font-hover-btn-color: #273c75;
+  --main-txt-color:#353b48;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,41 +22,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* style for the bg colors animation to work **/
-  background-size: 200% 200%;
-  background-image: linear-gradient(to top, #A72424 50%, transparent 50%);
-  -webkit-transition: background-position 300ms,
-  color 300ms ease,
-  border-color 300ms ease;
-  -moz-transition: background-position 300ms,
-  color 300ms ease,
-  border-color 300ms ease;
-  transition: background-position 300ms,
-    color 300ms ease,
-    border-color 300ms ease;
+  background: linear-gradient(var(--sec-body-color),var(--main-body-color));
 }
 
-/* 
-- when user click start: add this class
-- when user click pause, pause the timer
-- when user change the timer, reset the color
-- when the work is over reset the color
-*/
-
-
-body.timer_active {
-  background-image : linear-gradient(to top, #A72424 51%, transparent 50%);
-  background-position: 0 100%;
-  -webkit-transition: background-position 30000ms,
-  color 300ms ease,
-  border-color 300ms ease;
-  -moz-transition: background-position 30000ms,
-  color 300ms ease,
-  border-color 300ms ease;
-  transition: background-position 300000ms,
-  color 300ms ease,
-  border-color 300ms ease;
+button {
+  width: 60px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  background-color: var(--main-btn-color);
+  color: var(--font-btn-color);
+  cursor: pointer;
+  border-radius: 10%;
+}
+#buttons button{
+  width:80px;
+}
+button:hover,
+button:focus {
+  cursor: pointer;
+  background-color: var(--hover-btn-color);
+  transition: background-color 500ms;
+  color: var(--font-hover-btn-color);
 }
 
 #container {
@@ -53,14 +54,15 @@ body.timer_active {
   max-width: 90%;
   height: auto;
   padding: 2%;
-  background-color: yellow;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
+  border-radius: 2%;
 }
 
 
 #clock {
-  border: 2px solid black;
+  border: 5px solid var(--main-btn-color);
   border-radius: 50%;
   height: 300px;
   width: 300px;
@@ -82,4 +84,33 @@ body.timer_active {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 25px;
+}
+
+#session_info {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--main-txt-color);
+}
+#session_type {
+  font-size: 1.5rem;
+}
+
+#timer_work,
+#timer_break{
+  text-align: center;
+  color: var(--main-txt-color);
+}
+
+#timer {
+  font-size: 2rem;
+  color: var(--main-txt-color);
+}
+
+h6 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
