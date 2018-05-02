@@ -1,0 +1,55 @@
+:root {
+  --button-bg-color: #ecf0f1;
+  --equal-bg-color: #3498db;
+  --clear-bg-color: #e74c3c;
+  --delete-bg-color: #f1c40f;
+  --font-color: #2c3e50
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+}
+
+#calculator {
+  min-width: 600px;
+  max-width: 800px;
+  height: auto;
+  max-height: 100px;
+}
+
+#display,
+#button_container {
+  height: 50%;
+  min-height: 300px;
+  width: 100%;
+}
+#display {
+  background-color: yellow;
+}
+
+#button_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+/* make equal span 2 in height */
+#equal {
+  grid-row: span 2;
+  background-color: var(--equal-bg-color);
+}
+#clear {
+  background-color:var(--clear-bg-color);
+}
+#delete {
+  background-color: var(--delete-bg-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  min-width: 50px;
+  min-height: 50px;
+}
+
