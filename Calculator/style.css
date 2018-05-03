@@ -3,32 +3,38 @@
   --equal-bg-color: #3498db;
   --clear-bg-color: #e74c3c;
   --delete-bg-color: #f1c40f;
-  --font-color: #2c3e50
+  --font-color: #2c3e50;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.2rem;
+  color: var(--font-color);
+}
 body {
   height: 100vh;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--font-color);
+  background: linear-gradient(var(--delete-bg-color),var(--clear-bg-color));
 }
 
 #calculator {
   min-width: 600px;
   max-width: 800px;
   height: auto;
-  max-height: 100px;
+  border: 3px solid var(--font-color);
 }
 
-#display,
 #button_container {
-  height: 50%;
+  height: 60%;
   min-height: 300px;
   width: 100%;
-}
-#display {
-  background-color: yellow;
 }
 
 #button_container {
@@ -51,5 +57,33 @@ button {
   background-color: var(--button-bg-color);
   min-width: 50px;
   min-height: 50px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--font-color);
+  border-radius: 5%;
 }
 
+
+/* style the display */
+
+
+
+#display {
+  height: 40%;
+  font-size: 2.5rem;
+  min-height: 300px;
+  background-color: var(--button-bg-color);
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} 
+#display_result {
+  font-size: 4rem;
+  font-weight: bold;
+  position: relative;
+  align-self: flex-end;
+  /* justify-self: flex-end; */
+  /* padding-left: 90%; */
+  /* padding-top: 90%; */
+}
