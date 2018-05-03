@@ -9,3 +9,4 @@ Repo where to upload the projects from FreeCodeCamp curriculum
 - [x] Technical documentation page - 18 July 2017
 - [x] Product Landing Page - 26 July 2017
 - [x] Pomodoro Clock - 2 May 2018
+- [x] Calculator - 3 May 2018
