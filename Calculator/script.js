@@ -45,7 +45,12 @@ function calculateResult(string){
   display_result.innerHTML = eval(string);
   if (display_result.innerHTML === "undefined") {
     display_result.innerHTML = "";
+  } else if  (display_result.innerHTML === "NaN") {
+    display_result.innerHTML = "Error!!";
   }
 }
 
 });
+
+
+// if it returns NAN then display error

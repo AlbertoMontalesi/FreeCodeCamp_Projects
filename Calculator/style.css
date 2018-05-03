@@ -5,6 +5,7 @@
   --delete-bg-color: #f1c40f;
   --font-color: #2c3e50;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,7 @@
   list-style-type: none;
   font-size: 1.2rem;
   color: var(--font-color);
+  font-family: 'Montserrat', sans-serif !important;
 }
 body {
   height: 100vh;
@@ -63,6 +65,10 @@ button {
   border-radius: 5%;
 }
 
+button:hover,
+button:active {
+  background-color: lightblue;g
+}
 
 /* style the display */
 
